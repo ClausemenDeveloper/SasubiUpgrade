@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="sasubiupgrade.controller.CantinaController"
+      spacing="10" alignment="CENTER"
+      style="-fx-background-color: white;">
+    
+    <padding>
+        <Insets top="20.0" right="20.0" bottom="20.0" left="20.0"/>
+    </padding>
+
+    <Label text="Sistema de Pedidos da Cantina"
+           style="-fx-text-fill: #002855; -fx-font-size: 16px; -fx-font-weight: bold;"/>
+
+    <!-- Tabela de Menu do Dia -->
+    <Label text="Menu do Dia"
+           style="-fx-font-size: 14px; -fx-font-weight: bold;"/>
+    <TableView fx:id="tabelaMenu" prefHeight="150" prefWidth="300">
+        <columns>
+            <TableColumn fx:id="colunaItem" text="Item" prefWidth="200"/>
+            <TableColumn fx:id="colunaPreco" text="Preço" prefWidth="100"/>
+        </columns>
+        <style>
+            -fx-border-color: #002855;
+        </style>
+    </TableView>
+
+    <!-- Campos de pedido -->
+    <TextField fx:id="inputNome" promptText="Seu nome"
+               style="-fx-border-color: #002855; -fx-font-size: 14px;"/>
+    <TextField fx:id="inputPedido" promptText="Seu pedido"
+               style="-fx-border-color: #002855; -fx-font-size: 14px;"/>
+
+    <Button text="Fazer Pedido"
+            style="-fx-background-color: #002855; -fx-text-fill: white; -fx-font-weight: bold;"
+            onAction="#fazerPedido"/>
+
+    <!-- Fila de Pedidos -->
+    <Label text="Fila de Pedidos"
+           style="-fx-font-size: 14px; -fx-font-weight: bold;"/>
+    <ListView fx:id="filaPedidos" prefHeight="150">
+        <style>
+            -fx-border-color: #002855;
+        </style>
+    </ListView>
+</VBox>

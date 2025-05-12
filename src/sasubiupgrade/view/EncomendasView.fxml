@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="sasubiupgrade.controller.EncomendasController"
+      spacing="10" alignment="CENTER"
+      style="-fx-background-color: white;">
+    
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <Label text="Encomendas de Estudantes"
+           style="-fx-text-fill: #002855; -fx-font-size: 16px; -fx-font-weight: bold;"/>
+
+    <TextField fx:id="inputNome" promptText="Nome do estudante"
+               style="-fx-border-color: #002855; -fx-font-size: 14px;"/>
+
+    <Button text="Registrar Encomenda"
+            style="-fx-background-color: #002855; -fx-text-fill: white; -fx-font-weight: bold;"
+            onAction="#registrarEncomenda"/>
+
+    <Button text="Ver Encomendas"
+            style="-fx-background-color: #002855; -fx-text-fill: white; -fx-font-weight: bold;"
+            onAction="#verEncomendas"/>
+
+    <Label text="Lista de Encomendas"
+           style="-fx-font-size: 14px; -fx-font-weight: bold;"/>
+    <ListView fx:id="listaEncomendas" prefHeight="150">
+        <style>
+            -fx-border-color: #002855;
+        </style>
+    </ListView>
+</VBox>
